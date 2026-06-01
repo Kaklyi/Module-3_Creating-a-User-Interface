@@ -26,7 +26,7 @@ public class module3 extends JFrame {
         mainPanel.setBackground(Color.WHITE);
         setContentPane(mainPanel);
 
-        // smallr box so background can be alteredd whitout affecting visibility of text
+        // smaller box so background can be altered without affecting visibility of text
         textBox = new JTextArea(5, 25);
         textBox.setFont(new Font("Arial", Font.PLAIN, 14));
         textBox.setLineWrap(true);
@@ -81,7 +81,7 @@ public class module3 extends JFrame {
             getContentPane().setBackground(greenColor);
             mainPanel.setBackground(greenColor);
 
-            // seperate txt box
+            // separate txt box
             textBox.setBackground(Color.WHITE);
 
             repaint();
@@ -93,12 +93,14 @@ public class module3 extends JFrame {
         setVisible(true);
     }
 
+    // produces a random green color(all shades included in the generator, from
+    // olive to neon)
     private String randomGreen() {
         Random random = new Random();
 
-        int green = 100 + random.nextInt(156); // 100–255 (medium to max)
-        int red = random.nextInt(green); // 0–(green-1)
-        int blue = random.nextInt(green); // 0–(green-1)
+        int green = 100 + random.nextInt(156);
+        int red = random.nextInt(green);
+        int blue = random.nextInt(green);
 
         return String.format("#%02X%02X%02X", red, green, blue);
     }
